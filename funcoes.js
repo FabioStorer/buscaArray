@@ -7,6 +7,7 @@ function busca (num, preDefinido) {
         execucao = execucao + 1;
         if (num == preDefinido[i]) {
             contem = contem + 1;
+            break;
         } else {
             naoContem = naoContem + 1;
         }
