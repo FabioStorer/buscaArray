@@ -1,11 +1,24 @@
-function busca (num) {
-    for (let i = 0; i < preDefinido; i++) {
-        let execucao = execucao + 1;
+let execucao = 0;
+let contem = 0;
+let naoContem = 0;
+
+function busca (num, preDefinido) {
+    for (let i = 0; i < preDefinido.length; i++) {
+        execucao = execucao + 1;
         if (num == preDefinido[i]) {
-            console.log('O número informado está no meu Array.');
+            contem = contem + 1;
         } else {
-            console.log('Número não encontrado.');
+            naoContem = naoContem + 1;
         }
+    }
+    console.log(contem)
+    console.log(naoContem)
+
+    if (contem != 0) {
+        console.log('O número está no meu array.');
+        console.log('A busca foi executada', execucao, 'vezes.');
+    } else {
+        console.log('O número não foi encontrado.');
     }
 };
 
